@@ -1,7 +1,7 @@
 ---
 title: "Home"
 hero:
-  img: "/img/elias.jpg"
+  img: "img/elias.jpg"
   title: "Hi, I'm Elias"
   subtitle: "I build modern web experiences."
   cta:
