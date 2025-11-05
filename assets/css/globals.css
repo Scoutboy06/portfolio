@@ -256,7 +256,7 @@ img {
   font-weight: 500;
   transition: all var(--bezier) 150ms;
   flex-shrink: 0;
-  outline: none;
+  /* outline: none; */
   width: fit-content;
   height: 2.25rem;
   padding: 0.5rem 1rem;

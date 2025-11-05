@@ -13,15 +13,9 @@
     margin-bottom: 1.5rem;
   }
 
-  .published {
-    color: var(--muted-foreground);
-    font-size: 0.875rem;
-  }
-
   .featured-image {
     border-radius: var(--radius);
   }
-
 
   .tags,
   .external-links {

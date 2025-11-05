@@ -1,8 +1,7 @@
 +++
 # Basic
 title = 'Programming Language'
-date = '2025-11-05T19:47:15+01:00'
-draft = true
+draft = false
 summary = ''
 description = 'A custom programming language inspired by TypeScript, built in Rust.'
 
@@ -16,25 +15,14 @@ featured_image = 'img/programming-languages.jpg'
 
 # Project metadata
 tags = ['Compiler', 'Programming Language', 'TypeScript', 'Rust']
-role = ''
-client = ''
-status = 'In Progress'
 
 # Presentation & ordering
 featured = true
-# weight = 0
-
-# Dates / publishing
-published_date = '2025-11-05T19:47:15+01:00'
-last_modified_date = ''
+weight = 1
 
 # SEO & social
 meta_description = ''
 og_image = ''
-
-# Licensing & credits
-# license = ''
-# credits = []
 
 # Misc
 hidden = false

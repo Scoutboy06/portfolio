@@ -1,18 +1,55 @@
 {{ define "main" }}
-<h1>{{ .Params.hero.title }}</h1>
-<p>{{ .Params.hero.subtitle }}</p>
+{{ $projects := sort .Pages "Params.featured" "desc" "Params.weight" "asc" }}
+{{ $projects = where $projects "Params.hidden" "ne" true }}
 
-<div class="rich-text">
-  {{ .Content }}
+{{ $css := resources.Get "css/projects/index.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
-  <ul class="projects-list">
-    {{ range .Pages }}
-    <li class="project-item">
-      <a href="{{ .RelPermalink }}">{{ .Params.title }}:</a>
-      <p>{{ .Params.description }}</p>
-    </li>
-    {{end}}
-  </ul>
+<div class="projects-page">
+  <h1>{{ .Params.hero.title }}</h1>
+  <p>{{ .Params.hero.subtitle }}</p>
+
+  <div class="rich-text">
+    {{ .Content }}
+  </div>
+
+  <div class="projects-list">
+    {{ range $projects }}
+    <div class="project-item">
+      <a class="overlay-link" href="{{ .RelPermalink }}" tabindex="-1"></a>
+
+      {{ if .Params.featured_image }}
+      <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
+      {{ end }}
+
+      <div class="project-info">
+        <h3><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
+        <p class="project-description">{{ .Params.description }}</p>
+        <div class="project-tags">
+          {{ range .Params.tags }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="project-links">
+        {{ if .Params.demo_url }}
+        <a class="btn outline" href="{{ .Params.demo_url | relURL }}" target="_blank" rel="noopener">
+          {{ partial "icon.html" (dict "name" "play")}}
+          Live Demo
+        </a>
+        {{ end }}
+
+        {{ if .Params.github_url }}
+        <a class="btn outline" href="{{ .Params.github_url | relURL }}" target="_blank" rel="noopener">
+          {{ partial "icon.html" (dict "name" "github")}}
+          Source Code
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
 </div>
 
 {{ end }}

@@ -6,8 +6,6 @@
 
   <p class="description">{{ .Params.description }}</p>
 
-  <p class="published">Published: {{ time.Format "2 Jan 2006" .Params.published_date }}</p>
-
   {{ if .Params.featured_image }}
   <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
   {{ end }}
