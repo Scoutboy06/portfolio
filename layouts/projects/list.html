@@ -2,7 +2,7 @@
 {{ $projects := sort .Pages "Params.featured" "desc" "Params.weight" "asc" }}
 {{ $projects = where $projects "Params.hidden" "ne" true }}
 
-{{ $css := resources.Get "css/projects/index.css" | minify | fingerprint }}
+{{ $css := resources.Get "css/projects/list.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 <div class="projects-page">
