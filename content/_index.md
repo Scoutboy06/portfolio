@@ -12,7 +12,7 @@ hero:
 
 Hi there! I'm Elias, a web developer passionate about building modern web experiences. Welcome to my portfolio!
 
-### PROJECT HIGHLIGHTS
+### Project Highlights
 
 - **Programming language**: [GitHub Repository](https://github.com/Scoutboy06/programming-language)
 - **Custom CMS**: [GitHub Repository](https://github.com/Scoutboy06/ruby-cms)
@@ -20,7 +20,7 @@ Hi there! I'm Elias, a web developer passionate about building modern web experi
 
 ### Skills
 
-- **Web development**: TypeScript, React, Next.js, SvelteKit, Tailwind
+- **Web development**: TypeScript, React, Next.js, SvelteKit, Tailwind, Ruby
 - **CMS**: WordPress (Gutenberg & Headless)
 - **Systems programming**: Rust, C++
 
@@ -32,5 +32,5 @@ Hi there! I'm Elias, a web developer passionate about building modern web experi
 
 ### Academic background
 
-- Master of Science in Information Technology, Chalmers University of Technology, _2025-present_
+- Master of Science in Information Technology, Chalmers University of Technology (5-year program), _2025-present_
 - Technology Programme at NTI Gymnasiet Johanneberg, _2021-2024_

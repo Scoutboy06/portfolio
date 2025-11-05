@@ -1,8 +1,19 @@
 <header class="site-header">
   <a href="/" class="site-title font-sans-serif">{{ .Site.Title }}</a>
-  <nav>
+  <nav class="desktop-nav">
     <a href="/contact/">Contact</a>
     <a href="/projects/">Projects</a>
     <a href="/blog/">Blog</a>
   </nav>
+  <div class="mobile-nav">
+    <button class="btn outline icon" id="menu-toggle" aria-label="Toggle Menu">
+      {{ partial "icon.html" (dict "name" "menu") }}
+    </button>
+    <div class="background"></div>
+    <nav id="mobile-menu" class="menu">
+      <a href="/contact/">Contact</a>
+      <a href="/projects/">Projects</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+  </div>
 </header>
