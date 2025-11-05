@@ -7,11 +7,7 @@ hero:
   cta:
     label: "View my work"
     url: "/projects/"
-sections:
-  - title: "About me"
-    content: "I'm a web developer specializing in creating beautiful and functional websites using the latest technologies."
-  - title: "Projects"
-    content: "Here are a few highlights from my portfolio."
+  socials: true
 ---
 
 Hi there! I'm Elias, a web developer passionate about building modern web experiences. Welcome to my portfolio!
@@ -37,4 +33,4 @@ Hi there! I'm Elias, a web developer passionate about building modern web experi
 ### Academic background
 
 - Master of Science in Information Technology, Chalmers University of Technology, _2025-present_
-- Technology at NTI Gymnasiet Johanneberg, _2021-2024_
+- Technology Programme at NTI Gymnasiet Johanneberg, _2021-2024_
