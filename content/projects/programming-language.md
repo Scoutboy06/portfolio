@@ -12,7 +12,7 @@ github_url = 'https://github.com/scoutboy06/programming-language'
 canonical_url = ''
 
 # Media & gallery
-featured_image = '/img/programming-languages.jpg'
+featured_image = 'img/programming-languages.jpg'
 
 # Project metadata
 tags = ['Compiler', 'Programming Language', 'TypeScript', 'Rust']

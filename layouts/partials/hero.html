@@ -1,11 +1,11 @@
 <section class="hero">
-  <img src="{{ .hero.img }}" alt="{{ .hero.title }}" class="hero-img">
+  <img src="{{ .hero.img | relURL }}" alt="{{ .hero.title }}" class="hero-img">
   <div class="hero-content">
     <h1>{{ .hero.title }}</h1>
     <p>{{ .hero.subtitle }}</p>
-    <a href="{{ .hero.cta.url }}" class="btn primary">{{ .hero.cta.label }}</a>
+    <a href="{{ .hero.cta.url | relURL }}" class="btn primary">{{ .hero.cta.label }}</a>
     {{ if .hero.socials }}
-      {{ partial "socials.html" . }}
+    {{ partial "socials.html" . }}
     {{ end }}
   </div>
 </section>

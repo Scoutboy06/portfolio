@@ -6,7 +6,7 @@ hero:
   subtitle: "I build modern web experiences."
   cta:
     label: "View my work"
-    url: "/projects/"
+    url: "projects/"
   socials: true
 ---
 
