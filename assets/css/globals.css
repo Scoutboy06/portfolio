@@ -104,6 +104,11 @@ svg {
   fill: currentColor;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .font-mono {
   font-family: var(--mono-font);
   font-optical-sizing: auto;
@@ -194,14 +199,14 @@ svg {
 
   code {
     font-family: var(--mono-font);
-    background: var(--muted);
+    /* background: var(--muted); */
     border-radius: var(--radius);
     padding: 0.2em 0.4em;
     font-size: 0.95em;
   }
 
   pre {
-    background-color: var(--muted);
+    /* background-color: var(--muted) !important; */
     padding: 1rem;
     border-radius: var(--radius);
     overflow-x: auto;
@@ -275,11 +280,6 @@ svg {
     flex-shrink: 0;
     width: 1.25rem;
     height: 1.25rem;
-
-    &:not([class*='size-']) {
-      width: 1rem;
-      height: 1rem;
-    }
   }
 
   &.primary {
@@ -311,10 +311,14 @@ svg {
   }
 }
 
-@media (min-width: var(--md)) {
-  .btn {
-    flex-direction: row;
-  }
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  background-color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 .social-links {
@@ -376,7 +380,7 @@ svg {
       position: fixed;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.5);
-      transition: background-color var(--bezier) 150ms;
+      transition: background-color var(--bezier) 150ms, opacity var(--bezier) 150ms;
       pointer-events: none;
       user-select: none;
       opacity: 0;

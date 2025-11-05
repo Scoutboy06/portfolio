@@ -1,0 +1,18 @@
+{{ define "main" }}
+<h1>{{ .Params.hero.title }}</h1>
+<p>{{ .Params.hero.subtitle }}</p>
+
+<div class="rich-text">
+  {{ .Content }}
+
+  <ul class="projects-list">
+    {{ range .Pages }}
+    <li class="project-item">
+      <a href="{{ .RelPermalink }}">{{ .Params.title }}:</a>
+      <p>{{ .Params.description }}</p>
+    </li>
+    {{end}}
+  </ul>
+</div>
+
+{{ end }}

@@ -1,0 +1,45 @@
+.single-project {
+  margin-top: 2rem;
+
+  &>h1 {
+    margin-bottom: 1rem;
+  }
+
+  &>p {
+    margin-block: 0.5rem;
+  }
+
+  .description {
+    margin-bottom: 1.5rem;
+  }
+
+  .published {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+  }
+
+  .featured-image {
+    border-radius: var(--radius);
+  }
+
+
+  .tags,
+  .external-links {
+    margin-top: 1rem;
+
+    ul {
+      margin-block: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+
+  &>article {
+    margin-top: 2rem;
+  }
+}

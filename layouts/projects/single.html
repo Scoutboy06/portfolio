@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ $css := resources.Get "css/projects/single.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<div class="single-project">
+  <h1>{{ .Params.title }}</h1>
+
+  <p class="description">{{ .Params.description }}</p>
+
+  <p class="published">Published: {{ time.Format "2 Jan 2006" .Params.published_date }}</p>
+
+  {{ if .Params.featured_image }}
+  <img class="featured-image" src="{{ .Params.featured_image }}" alt="{{ .Params.title }}">
+  {{ end }}
+
+
+  <div class="tags">
+    <strong>Tags</strong>
+    <ul>
+      {{ range .Params.tags }}
+      <li><span class="tag">{{ . }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+
+  {{ if or .Params.demo_url .Params.github_url }}
+  <div class="external-links">
+    <strong>External Links</strong>
+    <ul>
+      {{ if .Params.demo_url }}
+      <li>
+        <a class="btn outline" href="{{ .Params.demo_url }}" target="_blank" rel="noopener">
+          {{ partial "icon.html" (dict "name" "play")}}
+          Live Demo
+        </a>
+      </li>
+      {{ end }}
+      {{ if .Params.github_url }}
+      <li>
+        <a class="btn outline" href="{{ .Params.github_url }}" target="_blank" rel="noopener">
+          {{ partial "icon.html" (dict "name" "github")}}
+          Source Code
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <article class="rich-text">
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

@@ -1,7 +1,11 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://scoutboy06.github.io/portfolio/'
 languageCode = 'en-us'
 title = 'Elias Wennerlund'
 
 [caches]
 [caches.images]
 dir = ':cacheDir/images'
+
+[markup]
+[markup.highlight]
+style = "tokyonight-night"

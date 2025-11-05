@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }} | {{ .Site.Title }}</title>
-  <link rel="stylesheet" href="{{ "css/globals.css" | relURL }}">
-  <script src="{{ "js/globals.js" | relURL }}" defer></script>
+  {{ $global_css := resources.Get "css/globals.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $global_css.RelPermalink }}" integrity="{{ $global_css.Data.Integrity }}">
+  {{ $global_js := resources.Get "js/globals.js" | minify | fingerprint }}
+  <script src="{{ $global_js.RelPermalink }}" integrity="{{ $global_js.Data.Integrity }}" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{/*
@@ -13,6 +16,7 @@
     rel="stylesheet"> */}}
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body class="dark font-mono">
   {{ partial "icons.svg" . }}
 
@@ -24,4 +28,5 @@
 
   {{ partial "footer.html" . }}
 </body>
+
 </html>
