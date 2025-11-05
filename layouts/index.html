@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ partial "hero.html" (dict "hero" .Params.hero "Site" .Site) }}
+
+<section class="rich-text">
+  {{ .Content }}
+</section>
+{{ end }}

@@ -1,0 +1,5 @@
+{{ $name := .name }}
+{{ $class := .class | default "icon" }}
+<svg aria-hidden="true" focusable="false" class="{{ $class }}">
+  <use xlink:href="#icon-{{ $name }}"></use>
+</svg>

@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <a href="{{ .Site.Data.social.github }}" target="_blank" rel="noopener noreferrer">
+    {{ partial "icon.html" (dict "name" "github") }}
+  </a>
+  <a href="{{ .Site.Data.social.linkedin }}" target="_blank" rel="noopener noreferrer">
+    {{ partial "icon.html" (dict "name" "linkedin") }}
+  </a>
+  <a href="mailto:{{ .Site.Data.social.email }}?subject=[Portfolio Inquiry] Contact request" target="_blank" rel="noopener noreferrer">
+    {{ partial "icon.html" (dict "name" "email") }}
+  </a>
+</footer>
