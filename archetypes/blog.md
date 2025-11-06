@@ -1,6 +1,7 @@
 +++
 # Basic
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+date = '{{ .Date }}'
 draft = true
 summary = ''
 description = ''
@@ -24,4 +25,5 @@ og_image = ''
 
 # Misc
 hidden = false
+toc = false
 +++

@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $posts := where .Pages "Params.hidden" "ne" true }}
+
+{{ $css := resources.Get "css/blog/list.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+<div class="blog-page">
+  <h1>{{ .Params.title }}</h1>
+  <p>{{ .Params.subtitle }}</p>
+
+  <div class="rich-text">
+    {{ .Content }}
+  </div>
+
+  <div class="blog-list">
+    {{ range $posts }}
+    <div class="blog-post">
+      <a class="overlay-link" href="{{ .RelPermalink }}" tabindex="-1"></a>
+
+      {{ if .Params.featured_image }}
+      <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
+      {{ end }}
+
+      <div class="post-info">
+        <h3><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
+        <p class="description">{{ .Params.description }}</p>
+        <div class="tags">
+          {{ range .Params.tags }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

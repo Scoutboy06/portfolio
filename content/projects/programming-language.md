@@ -29,3 +29,4 @@ hidden = false
 +++
 
 Ever heard of TypeScript? Most developers have. I personally think TypeScript is a great language because it makes working with JavaScript so much easier in larger codebases. But here's the problem: TypeScript still compiles down to JavaScript, which means it also inherits all of JavaScript's quirks and limitations. So, I decided to create my own programming language, inspired by TypeScript, but designed to overcome these limitations.
+

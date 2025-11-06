@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $css := resources.Get "css/blog/single.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+<div class="blog-post">
+  <h1>{{ .Params.title }}</h1>
+
+  <p class="description">{{ .Params.description }}</p>
+
+  {{ if .Params.featured_image }}
+  <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
+  {{ end }}
+
+
+  <div class="tags">
+    <strong>Tags</strong>
+    <ul>
+      {{ range .Params.tags }}
+      <li><span class="tag">{{ . }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <article class="rich-text">
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}
