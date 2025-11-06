@@ -1,0 +1,18 @@
+{{ $projects := sort .Pages "Params.featured" "desc" "Params.weight" "asc" }}
+{{ $projects = where $projects "Params.hidden" "ne" true }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ with .Params.title }}{{ . }}{{ else }}Projects{{ end }}",
+  "hasPart": [
+    {{ range $index, $project := $projects }}
+    {
+      "@type": "SoftwareApplication",
+      "name": "{{ .Params.title }}",
+      "url": "{{ .Permalink }}",
+    }{{ if lt (add $index 1) (len $projects) }},{{ end }}
+    {{ end }}
+  ]
+}
+</script>

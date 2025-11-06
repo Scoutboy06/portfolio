@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ .Params.title }}",
+  "description": "{{ .Params.description }}",
+  "url": "{{ .Page.Permalink }}",
+  {{ with .Params.featured_image }}
+  "image": "{{ . | absURL }}",
+  {{ end }}
+  {{ with .Params.tags }}
+  "applicationCategory": "{{ delimit . ", " }}",
+  {{ end }}
+  {{ with .Params.demo_url }}
+  "downloadURL": "{{ . }}",
+  {{ end }}
+  {{ with .Params.github_url }}
+  "codeRepository": "{{ . }}",
+  {{ end }}
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Data.person.name }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>

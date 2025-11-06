@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "structured/projects.html" . }}
+
 {{ $projects := sort .Pages "Params.featured" "desc" "Params.weight" "asc" }}
 {{ $projects = where $projects "Params.hidden" "ne" true }}
 

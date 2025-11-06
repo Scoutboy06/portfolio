@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "structured/blogpost.html" . }}
+
 {{ $css := resources.Get "css/blog/single.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
@@ -25,4 +28,5 @@
     {{ .Content }}
   </article>
 </div>
+
 {{ end }}

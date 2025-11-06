@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "structured/softwareApplication.html" . }}
+
 {{ $css := resources.Get "css/projects/single.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 <div class="single-project">
@@ -48,4 +51,5 @@
     {{ .Content }}
   </article>
 </div>
+
 {{ end }}

@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Params.title }}",
+  "description": "{{ .Params.description }}",
+  {{ with .Params.featured_image }}
+  "image": "{{ . | absURL }}",
+  {{ end }}
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Data.person.name }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "mainEntityOfPage": "{{ .Page.Permalink }}"
+}
+</script>

@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "{{ .Site.Data.person.name }}",
+  "email": "{{ .Site.Data.person.email }}",
+  "url": "{{ .Site.BaseURL }}",
+  "image": "{{ .Site.Data.person.image | absURL }}",
+  "knowsLanguage": {{ .Site.Data.person.knowsLanguage | jsonify | safeJS }},
+  "sameAs": [
+    "{{ .Site.Data.social.linkedin }}",
+    "{{ .Site.Data.social.github }}"
+  ]
+}
+</script>

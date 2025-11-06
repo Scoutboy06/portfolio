@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "structured/blogIndex.html" . }}
+
 {{ $posts := where .Pages "Params.hidden" "ne" true }}
 
 {{ $css := resources.Get "css/blog/list.css" | minify | fingerprint }}
@@ -34,4 +37,5 @@
     {{ end }}
   </div>
 </div>
+
 {{ end }}

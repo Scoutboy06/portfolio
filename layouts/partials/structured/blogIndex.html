@@ -1,0 +1,17 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ with .Params.title }}{{ . }}{{ else }}Blog{{ end }}",
+  "url": "{{ .Permalink }}",
+  "blogPost": [
+    {{ range $index, $post := .Pages }}
+    {
+      "@type": "BlogPosting",
+      "headline": "{{ .Params.title }}",
+      "url": "{{ .Permalink }}"
+    }{{ if lt (add $index 1) (len .Pages) }},{{ end }}
+    {{ end }}
+  ]
+}
+</script>
