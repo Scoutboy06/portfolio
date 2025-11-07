@@ -75,6 +75,10 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+}
+
 body {
   width: 100%;
   max-width: var(--page-max-width);
@@ -83,6 +87,11 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   fill: var(--foreground);
+}
+
+body.noscroll {
+  overflow: hidden;
+  padding-right: calc(100vw - 100%);
 }
 
 a {
@@ -362,10 +371,10 @@ img {
         pointer-events: auto;
       }
 
-      & .menu {
+      & .sheet-container {
         pointer-events: auto;
         user-select: auto;
-        transform: translateY(0);
+        transform: translateX(0);
       }
     }
 
@@ -386,37 +395,47 @@ img {
       opacity: 0;
     }
 
-    .menu {
+    .sheet-container {
       background-color: var(--background);
       position: fixed;
-      left: 0;
       right: 0;
       top: 0;
+      bottom: 0;
       display: flex;
       flex-direction: column;
-      pointer-events: none;
-      user-select: none;
-      transform: translateY(-100%);
+      align-items: flex-end;
+      transform: translateX(100%);
       transition: transform var(--bezier) 150ms;
 
-      .close-btn svg {
-        width: 1.5rem;
-        height: 1.5rem;
+      .top-bar {
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-inline: var(--page-padding);
       }
 
-      &>a {
-        padding: 2rem 1.5rem;
-        font-size: 1.25rem;
-        border-bottom: 1px solid var(--border);
-        transition: background-color var(--bezier) 150ms;
-        text-align: center;
+      .menu {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        max-width: calc(100vw - 5rem);
 
-        &:first-child {
-          border-top: 1px solid var(--border);
-        }
+        &>a {
+          padding: 2rem 1.5rem;
+          font-size: 1.25rem;
+          border-bottom: 1px solid var(--border);
+          transition: background-color var(--bezier) 150ms;
+          width: 100%;
+          user-select: none;
 
-        &:hover {
-          background-color: var(--muted);
+          &:first-child {
+            border-top: 1px solid var(--border);
+          }
+
+          &:hover {
+            background-color: var(--muted);
+          }
         }
       }
 

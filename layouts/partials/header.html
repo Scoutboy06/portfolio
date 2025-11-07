@@ -1,17 +1,29 @@
 <header class="site-header">
   <a href="{{ "./" | relURL }}" class="site-title font-sans-serif">{{ .Site.Title }}</a>
+
   <nav class="desktop-nav">
     <a href="{{ "projects/" | relURL }}">Projects</a>
     <a href="{{ "blog/" | relURL }}">Blog</a>
   </nav>
+
   <div class="mobile-nav">
     <button class="btn outline icon" id="menu-toggle" aria-label="Toggle Menu">
       {{ partial "icon.html" (dict "icon" "menu") }}
     </button>
+
     <div class="background"></div>
-    <nav id="mobile-menu" class="menu">
-      <a href="{{ "projects/" | relURL }}">Projects</a>
-      <a href="{{ "blog/" | relURL }}">Blog</a>
-    </nav>
+
+    <div class="sheet-container">
+      <div class="top-bar">
+        <button class="btn outline icon" id="menu-close" aria-label="Close Menu">
+          {{ partial "icon.html" (dict "icon" "close") }}
+        </button>
+      </div>
+
+      <nav id="mobile-menu" class="menu">
+        <a href="{{ "projects/" | relURL }}">Projects</a>
+        <a href="{{ "blog/" | relURL }}">Blog</a>
+      </nav>
+    </div>
   </div>
 </header>

@@ -1,20 +1,32 @@
-const $ = (selector) => document.querySelector(selector);
-const $$ = (selector) => document.querySelectorAll(selector);
+(function () {
+  const $ = (selector) => document.querySelector(selector);
+  const $$ = (selector) => document.querySelectorAll(selector);
 
-function initMobileNav() {
   const mobileNav = $('.mobile-nav');
   const menuBtn = $('#menu-toggle');
   const background = $('.mobile-nav .background');
+  const closeBtn = $('#menu-close');
 
-  menuBtn.addEventListener('click', () => {
+
+  function openMobileNav() {
     mobileNav.classList.add('visible');
-  });
+    // document.body.style.overflow = 'hidden';
+    document.body.classList.add('noscroll');
+  }
 
-  background.addEventListener('click', () => {
+  function closeMobileNav() {
     mobileNav.classList.remove('visible');
-  });
-}
+    // document.body.style.overflow = '';
+    document.body.classList.remove('noscroll');
+  }
 
-window.addEventListener('load', () => {
-  initMobileNav();
-});
+  function initMobileNav() {
+    menuBtn.addEventListener('click', openMobileNav);
+    background.addEventListener('click', closeMobileNav);
+    closeBtn.addEventListener('click', closeMobileNav);
+  }
+
+  window.addEventListener('load', () => {
+    initMobileNav();
+  });
+})();
