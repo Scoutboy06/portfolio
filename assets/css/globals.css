@@ -512,3 +512,20 @@ main {
     --page-padding: 2rem;
   }
 }
+
+.project-highlights-list {
+  li:has(>.bullet) {
+    list-style: none;
+    position: relative;
+  }
+
+  .bullet {
+    position: absolute;
+    left: -1.75rem;
+    top: 0rem;
+  }
+
+  a {
+    display: inline-block;
+  }
+}

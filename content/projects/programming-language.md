@@ -1,6 +1,6 @@
 +++
 # Basic
-title = 'Programming Language'
+title = 'Programming language'
 draft = false
 summary = ''
 description = 'A custom programming language inspired by TypeScript, built in Rust.'

@@ -38,14 +38,14 @@
       <div class="project-links">
         {{ if .Params.demo_url }}
         <a class="btn outline" href="{{ .Params.demo_url | relURL }}" target="_blank" rel="noopener">
-          {{ partial "icon.html" (dict "name" "play")}}
+          {{ partial "icon.html" (dict "icon" "play")}}
           Live Demo
         </a>
         {{ end }}
 
         {{ if .Params.github_url }}
         <a class="btn outline" href="{{ .Params.github_url | relURL }}" target="_blank" rel="noopener">
-          {{ partial "icon.html" (dict "name" "github")}}
+          {{ partial "icon.html" (dict "icon" "github")}}
           Source Code
         </a>
         {{ end }}

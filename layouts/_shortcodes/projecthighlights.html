@@ -1,0 +1,18 @@
+{{ $projects := where .Site.RegularPages "Section" "projects" }}
+{{ $projects = where $projects "Params.featured" true }}
+{{ $projects = sort $projects "Params.weight" "desc" }}
+
+<ul class="project-highlights-list">
+  {{ range $projects }}
+  <li>
+    <span class="bullet">🚀</span>
+    <strong>
+      {{ .Params.title }}:
+    </strong>
+
+    {{ .Params.description }}
+
+    <a href="{{ .RelPermalink}}">Read more →</a>
+  </li>
+  {{ end }}
+</ul>

@@ -14,14 +14,13 @@ Hi there! I'm Elias, a web developer passionate about building modern web experi
 
 ### Project Highlights
 
-- **Programming language**: [GitHub Repository](https://github.com/Scoutboy06/programming-language)
-- **Custom CMS**: [GitHub Repository](https://github.com/Scoutboy06/ruby-cms)
-- **Manga reader**: [GitHub Repository](https://github.com/Scoutboy06/manga-reader)
+{{< projecthighlights >}}
 
 ### Skills
 
 - **Web development**: TypeScript, React, Next.js, SvelteKit, Tailwind, Ruby
 - **CMS**: WordPress (Gutenberg & Headless)
+- **Databases**: MongoDB, Sqlite
 - **Systems programming**: Rust, C++
 
 ### Professional journey
