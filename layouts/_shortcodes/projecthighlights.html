@@ -1,6 +1,6 @@
 {{ $projects := where .Site.RegularPages "Section" "projects" }}
 {{ $projects = where $projects "Params.featured" true }}
-{{ $projects = sort $projects "Params.weight" "desc" }}
+{{ $projects = sort $projects.ByWeight }}
 
 <ul class="project-highlights-list">
   {{ range $projects }}
@@ -12,7 +12,7 @@
 
     {{ .Params.description }}
 
-    <a href="{{ .RelPermalink}}">Read more →</a>
+    <a href="{{ .RelPermalink}}" aria-label="Read more about {{ .Params.title }}">Read more →</a>
   </li>
   {{ end }}
 </ul>

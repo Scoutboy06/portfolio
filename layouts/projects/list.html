@@ -2,8 +2,8 @@
 
 {{ partial "structured/projects.html" . }}
 
-{{ $projects := sort .Pages "Params.featured" "desc" "Params.weight" "asc" }}
-{{ $projects = where $projects "Params.hidden" "ne" true }}
+{{ $projects := where .Pages "Params.hidden" "ne" true }}
+{{ $projects = $projects.ByWeight }}
 
 {{ $css := resources.Get "css/projects/list.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

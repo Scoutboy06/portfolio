@@ -18,7 +18,7 @@ tags = ['Ruby', 'CMS', 'SQL', 'ORM']
 
 # Presentation & ordering
 featured = true
-weight = 0
+weight = 2
 
 # SEO & social
 meta_description = ''

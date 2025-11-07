@@ -3,6 +3,7 @@
 {{ partial "structured/blogIndex.html" . }}
 
 {{ $posts := where .Pages "Params.hidden" "ne" true }}
+{{ $posts = $posts.ByWeight }}
 
 {{ $css := resources.Get "css/blog/list.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

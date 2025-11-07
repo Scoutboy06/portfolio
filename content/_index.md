@@ -18,7 +18,7 @@ Hi there! I'm Elias, a web developer passionate about building modern web experi
 
 ### Skills
 
-- **Web development**: TypeScript, React, Next.js, SvelteKit, Tailwind, Ruby
+- **Web development**: TypeScript, Node.js, React, Next.js, SvelteKit, Tailwind, Ruby
 - **CMS**: WordPress (Gutenberg & Headless)
 - **Databases**: MongoDB, Sqlite
 - **Systems programming**: Rust, C++

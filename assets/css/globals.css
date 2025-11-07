@@ -523,6 +523,8 @@ main {
     position: absolute;
     left: -1.75rem;
     top: 0rem;
+    user-select: none;
+    pointer-events: none;
   }
 
   a {

@@ -3,8 +3,8 @@
 title = 'Manga Reader'
 date = '2025-11-06T00:35:55+01:00'
 draft = false
-summary = 'A web application for reading manga online.'
-description = ''
+description = 'A web application for reading manga online.'
+summary = ''
 
 # Links
 demo_url = 'https://manga-reader-scoutboy06.vercel.app/'
@@ -18,8 +18,8 @@ featured_image = ''
 tags = ['Next.js', 'TypeScript', 'Node.js', 'Web Scraping', 'CMS', 'Manga', 'Anime']
 
 # Presentation & ordering
-featured = false
-weight = 0
+featured = true
+weight = 3
 
 # SEO & social
 meta_description = ''
