@@ -21,9 +21,11 @@
     <div class="project-item">
       <a class="overlay-link" href="{{ .RelPermalink }}" tabindex="-1"></a>
 
-      {{ if .Params.featured_image }}
-      <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
-      {{ end }}
+      <div class="featured-image-container">
+        {{ if .Params.featured_image }}
+        <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
+        {{ end }}
+      </div>
 
       <div class="project-info">
         <h3><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>

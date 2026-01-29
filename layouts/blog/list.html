@@ -21,13 +21,15 @@
     <div class="blog-post">
       <a class="overlay-link" href="{{ .RelPermalink }}" tabindex="-1"></a>
 
-      {{ if .Params.featured_image }}
-      <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
-      {{ end }}
+      <div class="featured-image-container">
+        {{ if .Params.featured_image }}
+        <img class="featured-image" src="{{ .Params.featured_image | relURL }}" alt="{{ .Params.title }}">
+        {{ end }}
+      </div>
 
       <div class="post-info">
         <h3><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
-        <p class="description">{{ .Params.description }}</p>
+        <p class="post-description">{{ .Params.description }}</p>
         <div class="tags">
           {{ range .Params.tags }}
           <span class="tag">{{ . }}</span>
