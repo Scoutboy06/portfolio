@@ -1,4 +1,5 @@
 +++
+category = 'CONTENT MANAGEMENT'
 # Basic
 title = 'Ruby CMS'
 draft = false

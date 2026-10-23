@@ -1,4 +1,8 @@
 +++
+cover = 'reader'
+cover_label = 'WEB APPLICATION'
+cover_title = 'Manga Reader'
+category = 'WEB DEVELOPMENT'
 # Basic
 title = 'Manga Reader'
 date = '2025-11-06T00:35:55+01:00'
@@ -28,3 +32,9 @@ og_image = ''
 # Misc
 hidden = false
 +++
+
+## Overview
+
+A web application for reading manga online, built with Next.js, TypeScript, and Node.js.
+
+The source code and live demo are linked above.

@@ -1,11 +1,1 @@
-<div class="social-links">
-  <a href="{{ .Site.Data.social.github }}" target="_blank" rel="noopener noreferrer">
-    {{ partial "icon.html" (dict "icon" "github") }}
-  </a>
-  <a href="{{ .Site.Data.social.linkedin }}" target="_blank" rel="noopener noreferrer">
-    {{ partial "icon.html" (dict "icon" "linkedin") }}
-  </a>
-  <a href="mailto:{{ .Site.Data.social.email }}?subject=[Portfolio Inquiry] Contact request" target="_blank">
-    {{ partial "icon.html" (dict "icon" "email") }}
-  </a>
-</div>
+<div class="social-links"><a aria-label="GitHub" href="{{ .Site.Data.social.github }}">{{ partial "icon.html" (dict "icon" "github") }}</a><a aria-label="LinkedIn" href="{{ .Site.Data.social.linkedin }}">{{ partial "icon.html" (dict "icon" "linkedin") }}</a><a aria-label="Email Elias" href="mailto:{{ .Site.Data.social.email }}">{{ partial "icon.html" (dict "icon" "email") }}</a></div>

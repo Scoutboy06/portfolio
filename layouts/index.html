@@ -1,9 +1,5 @@
 {{ define "main" }}
-
-{{ partial "hero.html" (dict "hero" .Params.hero "Site" .Site) }}
-
-<section class="rich-text">
-  {{ .Content }}
-</section>
-
+<section class="home-hero"><div class="hero-copy"><h1>Hi, I’m Elias<br><span>Web development &amp;<br>systems programming</span></h1><p class="hero-description">Developer at Inet. Information Technology student at Chalmers.</p><div class="hero-actions"><a class="btn primary" href="{{ "projects/" | relURL }}">Explore my projects <span aria-hidden="true">↗</span></a><a class="text-link" href="{{ "career/" | relURL }}">More about me →</a></div></div><figure class="portrait"><img src="{{ "img/elias.jpg" | relURL }}" alt="Elias Wennerlund" width="640" height="640"></figure></section>
+<section class="work-section"><div class="section-heading"><div><h2>Selected projects</h2></div><a class="text-link" href="{{ "projects/" | relURL }}">All projects ↗</a></div><div class="projects-list">{{ range (where (where .Site.RegularPages "Section" "projects") "Params.featured" true).ByWeight }}{{ partial "project-card.html" . }}{{ end }}</div></section>
+<section class="about-section"><div><h2>Skills &amp; interests</h2><p>I work with web technologies and content management systems, and explore systems programming through projects in Rust and C++.</p></div><dl class="skill-list"><div><dt>Web development</dt><dd>TypeScript, React, Next.js, SvelteKit, Node.js, Tailwind, Ruby, C#/.NET</dd></div><div><dt>Content & data</dt><dd>WordPress, MongoDB, SQLite</dd></div><div><dt>Systems programming</dt><dd>Rust, C++</dd></div></dl></section>
 {{ end }}

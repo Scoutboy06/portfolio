@@ -9,15 +9,11 @@
   <link rel="stylesheet" href="{{ $global_css.RelPermalink }}" integrity="{{ $global_css.Data.Integrity }}">
   {{ $global_js := resources.Get "js/globals.js" | minify | fingerprint }}
   <script src="{{ $global_js.RelPermalink }}" integrity="{{ $global_js.Data.Integrity }}" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  {{/*
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet"> */}}
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
 </head>
 
-<body class="dark font-mono">
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
   {{ partial "structured/person.html" . }}
   {{ partial "structured/website.html" . }}
 
@@ -25,7 +21,7 @@
 
   {{ partial "header.html" . }}
 
-  <main>
+  <main id="main">
     {{ block "main" . }}{{ end }}
   </main>
 

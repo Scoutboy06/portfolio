@@ -1,4 +1,4 @@
-baseURL = 'https://scoutboy06.github.io/portfolio/'
+baseURL = 'https://eliasw.dev/'
 languageCode = 'en-us'
 title = 'Elias Wennerlund'
 
@@ -9,3 +9,6 @@ dir = ':cacheDir/images'
 [markup]
 [markup.highlight]
 style = "tokyonight-night"
+
+[params]
+description = "Elias Wennerlund — developer at Inet and Information Technology student at Chalmers."

@@ -1,4 +1,8 @@
 +++
+cover = 'george'
+cover_label = 'GEOTECHNICAL CALCULATIONS'
+cover_title = 'George'
+category = 'ENGINEERING TOOL'
 # Basic
 title = 'George'
 draft = false
@@ -16,7 +20,7 @@ tags = ["Excel", "Visual Basic", "Geotechnics"]
 
 # Presentation & ordering
 featured = false
-weight = 0
+weight = 20
 
 # SEO & social
 meta_description = ''

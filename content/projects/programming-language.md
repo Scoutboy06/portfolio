@@ -1,4 +1,8 @@
 +++
+cover = 'language'
+cover_label = 'LANGUAGE DESIGN'
+cover_title = "TypeScript-inspired.\nRust-built."
+category = 'COMPILERS & LANGUAGES'
 # Basic
 title = 'Programming language'
 draft = false
@@ -11,7 +15,7 @@ github_url = 'https://github.com/scoutboy06/programming-language'
 canonical_url = ''
 
 # Media & gallery
-featured_image = 'img/programming-languages.jpg'
+featured_image = ''
 
 # Project metadata
 tags = ['Compiler', 'Programming Language', 'TypeScript', 'Rust']
@@ -28,5 +32,8 @@ og_image = ''
 hidden = false
 +++
 
-Ever heard of TypeScript? Most developers have. I personally think TypeScript is a great language because it makes working with JavaScript so much easier in larger codebases. But here's the problem: TypeScript still compiles down to JavaScript, which means it also inherits all of JavaScript's quirks and limitations. So, I decided to create my own programming language, inspired by TypeScript, but designed to overcome these limitations.
+## The idea
 
+A custom programming language inspired by TypeScript, implemented in Rust. The project explores language design beyond TypeScript’s compilation to JavaScript.
+
+The implementation is available in the source repository linked above.
