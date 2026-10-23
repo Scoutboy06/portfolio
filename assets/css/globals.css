@@ -127,3 +127,21 @@
  .footer-bottom > span { display: none; }
  .footer-bottom { flex-wrap: nowrap; }
 }
+
+/* Compact mobile navigation; native disclosure provides its expanded state. */
+.mobile-menu { display: none; }
+@media (max-width: 760px) {
+ .site-header { position: relative; z-index: 10; flex-direction: row; align-items: center; min-height: 80px; padding: 12px 0; gap: 16px; }
+ .site-header > .desktop-nav { display: none; }
+ .mobile-menu { display: block; position: relative; }
+ .mobile-menu > summary { width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; list-style: none; border-radius: 6px; }
+ .mobile-menu > summary::-webkit-details-marker { display: none; }
+ .mobile-menu > summary:hover { background: var(--surface); }
+ .mobile-menu > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+ .mobile-menu summary svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+ .mobile-menu .menu-close-icon, .mobile-menu[open] .menu-open-icon { display: none; }
+ .mobile-menu[open] .menu-close-icon { display: block; }
+ .mobile-menu > nav { position: absolute; right: 0; top: calc(100% + 10px); width: 220px; max-width: calc(100vw - 40px); padding: 8px; display: flex; flex-direction: column; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 30px #0005; }
+ .mobile-menu > nav a { display: flex; width: 100%; min-height: 46px; padding: 10px 14px; border-radius: 4px; font-size: .95rem; }
+ .mobile-menu > nav a:hover { background: var(--bg); }
+}
